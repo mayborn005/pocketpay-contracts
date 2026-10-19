@@ -213,7 +213,10 @@ stellar-pocketpay-contracts/
 - [Admin Role](docs/admin-role.md) – Details on the admin address, current capabilities, and future design considerations.
 - [Admin & Emergency Mechanism Threat Model](docs/admin-pause-threat-model.md) – Security analysis of malicious admin, compromised admin, accidental pause, and blocked-withdrawal scenarios.
 - [Failure Mode Catalogue](docs/failure-mode-catalogue.md) – Summary of safe-failure behavior, expected errors, affected functions, and related tests for vault operations.
+- [Contributor Security Checklist](docs/security-checklist.md) – Practical review checklist for vault contract changes covering accounting, lock state, token transfer safety, authorisation, storage, events, error handling, and tests.
 - [Contributor Self-Review Template](docs/self-review-template.md) – Copy-paste checklist covering behaviour, tests, CI, security, edge cases, and docs impact — fill it in before opening a PR.
+- [Contract Evaluation-Readiness Checklist](docs/evaluation-readiness-checklist.md) – Pre-evaluation checklist covering issue requirements, contract tests, required checks, security, edge cases, acceptance criteria, and the fact that merge does not guarantee approval or payment.
+- [Approval Readiness Checklist](docs/approval-readiness-checklist.md) – Final checklist before requesting evaluation: implementation completeness, tests, CI status, acceptance criteria review, docs, known limitations, and the post-merge-is-not-approval note.
 - [Traceability Table Guide](docs/traceability-table.md) – Standard format for mapping PR changes to issue acceptance criteria, with worked examples.
 - [Payment-Period Conduct Guidance](docs/payment-period-conduct.md) – Expectations for how contributors raise payment-status questions, and how GrantFox's evaluation process relates to this repository's review process.
 
@@ -299,3 +302,18 @@ make verify
 ## License
 
 MIT
+
+## Payment & Evaluation Policy
+Contributors participating in campaigns or rewarded issues must follow the [Payment-Period Communication Policy](docs/PAYMENT_POLICY.md). Payments follow the GrantFox evaluation process and are evaluated post-merge. Repeated complaints or spam regarding payouts are prohibited.
+
+## Acceptance Criteria Audit
+All PRs are required to include an [Acceptance Criteria Audit Table](docs/ACCEPTANCE_CRITERIA_AUDIT.md) mapping issue requirements to code and test evidence.
+
+## Contribution Quality & Examples
+Before submitting code, review the [Low-Effort Contribution Examples Guide](docs/LOW_EFFORT_EXAMPLES.md) to understand common anti-patterns (such as partial implementations or missing tests) and their required high-quality alternatives.
+
+## Local Deployment Verification
+To build, deploy, initialize, and smoke-test PocketPay contracts locally, follow the [Local Deployment Verification Flow](docs/LOCAL_DEPLOYMENT_VERIFICATION.md).
+
+## PR Reviewer Evidence
+Maintainers reviewing pull requests must verify submissions against the [Reviewer Evidence Checklist](docs/REVIEWER_EVIDENCE_CHECKLIST.md) to ensure scope, test coverage, CI green status, and documentation quality.
